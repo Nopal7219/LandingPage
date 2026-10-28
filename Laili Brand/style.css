@@ -1,0 +1,37 @@
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Background Gradient */
+        .bg-gradient-hero {
+            background: linear-gradient(180deg, #FDE8E8 0%, #F8B4B4 40%, #991B1B 95%);
+        }
+
+        /* Custom Arch Card Shape for 5 Pillars */
+        .arch-card {
+            border-top-left-radius: 9999px;
+            border-top-right-radius: 9999px;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+
+        /* Vertical Grid Lines Overlay */
+        .bg-grid-lines {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+            background-size: 20% 100%;
+        }
+
+        /* Custom Scrollbar Style */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDF2F2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #991B1B;
+            border-radius: 4px;
+        }
+</head>
+<body class="font-sans text-brand-text bg-white antialiased selection:bg-brand-red selection:text-white">
