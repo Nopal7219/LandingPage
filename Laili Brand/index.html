@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind Config Injection -->
+    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -36,3 +36,499 @@
             }
         }
     </script>
+
+    <!-- External Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-brand-text bg-white antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-2">
+                    <span class="font-serif text-3xl md:text-4xl font-bold tracking-tight text-brand-red">Laili</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-2 bg-brand-red text-white px-7 py-2.5 rounded-full shadow-md">
+                    <a href="#about" class="px-3 py-1 text-sm font-semibold hover:text-pink-200 transition-colors">About Us</a>
+                    <a href="#katalog" class="px-3 py-1 text-sm font-semibold hover:text-pink-200 transition-colors flex items-center gap-1">
+                        Katalog <i class="fa-solid fa-chevron-down text-xs opacity-80"></i>
+                    </a>
+                    <a href="#kemitraan" class="px-3 py-1 text-sm font-semibold hover:text-pink-200 transition-colors">Kemitraan</a>
+                    <a href="#seminar" class="px-3 py-1 text-sm font-semibold hover:text-pink-200 transition-colors">Free Seminar</a>
+                    <a href="#marketplace" class="px-3 py-1 text-sm font-semibold hover:text-pink-200 transition-colors">Marketplace</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-brand-red hover:text-brand-reddark focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-red text-white border-b border-brand-reddark px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-reddark">About Us</a>
+            <a href="#katalog" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-reddark">Katalog</a>
+            <a href="#kemitraan" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-reddark">Kemitraan</a>
+            <a href="#seminar" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-reddark">Free Seminar</a>
+            <a href="#marketplace" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-reddark">Marketplace</a>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO BANNER -->
+    <section class="relative bg-gradient-hero pt-10 md:pt-16 pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-6 text-brand-red space-y-3 text-center lg:text-left">
+                    <h2 class="font-serif italic text-3xl md:text-4xl font-medium text-white drop-shadow">Halo, Bunda!</h2>
+                    <h1 class="font-sans font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight text-white drop-shadow-md">
+                        Selamat datang <br/>di Laili Brand
+                    </h1>
+                    <p class="text-white text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed pt-2">
+                        Yuk, kenalan lebih dekat dengan Laili Brand! Temukan produk pilihan, peluang usaha dari rumah, dan seminar gratis yang siap menemani Bunda untuk terus bertumbuh bersama.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-6 relative mt-6 lg:mt-0">
+                    <div class="relative w-full max-w-lg mx-auto flex items-center justify-center">
+                        <div class="relative z-10 rounded-2xl overflow-hidden border-4 border-white shadow-2xl w-4/5">
+                            <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=1000&q=80" alt="Keluarga Laili Brand" class="w-full h-72 sm:h-96 object-cover" />
+                        </div>
+
+                        <div class="absolute -bottom-6 -left-2 z-20 w-48 sm:w-56 bg-white p-2.5 rounded-2xl shadow-2xl border-2 border-brand-pink transform -rotate-6">
+                            <div class="bg-brand-pink p-2 rounded-xl text-center">
+                                <span class="bg-brand-red text-white text-[10px] font-bold px-2 py-0.5 rounded-full inline-block mb-1">MILKMEE</span>
+                                <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=400&q=80" alt="Milkmee" class="h-28 w-full object-cover rounded-md" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 leading-none z-10">
+            <svg class="w-full h-12 md:h-16 text-brand-red" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 40C240 90 480 10 720 50C960 90 1200 20 1440 40V120H0V40Z" fill="currentColor"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SECTION 2: TENTANG KAMI -->
+    <section id="about" class="bg-brand-red text-white py-16 md:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-72 sm:w-80">
+                        <div class="absolute -top-6 -left-6 w-14 h-14 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 z-20">
+                            <i class="fa-regular fa-lightbulb text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute top-1/2 -right-6 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 z-20">
+                            <i class="fa-solid fa-magnifying-glass text-white text-xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 z-20">
+                            <i class="fa-regular fa-star text-white text-lg"></i>
+                        </div>
+
+                        <div class="relative border-4 border-white/50 p-2 rounded-t-full rounded-b-xl shadow-2xl bg-white/10">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Laili Founder" class="rounded-t-full rounded-b-lg w-full h-96 object-cover" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div>
+                        <span class="inline-block border-b-2 border-white pb-1 text-sm font-semibold tracking-wide uppercase mb-3">Tentang Kami</span>
+                        <h2 class="font-serif italic text-3xl sm:text-4xl md:text-5xl font-normal leading-tight">
+                            Apa itu Laili Brand?
+                        </h2>
+                    </div>
+                    <p class="text-white/95 text-base sm:text-lg leading-relaxed font-normal">
+                        <strong>Laili Brand</strong> adalah brand Indonesia yang hadir untuk mendampingi keluarga dalam membangun kehidupan yang lebih sehat, sejahtera, dan penuh makna. Kami percaya bahwa keluarga merupakan awal dari setiap perubahan besar.
+                    </p>
+                    <p class="text-white/95 text-base sm:text-lg leading-relaxed font-normal">
+                        Melalui produk kesehatan, kecantikan, dan fashion muslim berkualitas, Laili berkomitmen menghadirkan pilihan yang bermanfaat untuk kebutuhan keluarga Indonesia.
+                    </p>
+                    <div class="pt-2">
+                        <button onclick="openModal('joinModal')" class="bg-white text-brand-red font-bold px-8 py-3 rounded-full shadow-lg hover:bg-brand-pink transition transform hover:scale-105">
+                            Yuk, Join Bunda?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: 5 PILAR UTAMA LAILI BRAND -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-brand-red to-brand-redlight text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-lines opacity-40 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="font-sans font-bold text-3xl sm:text-4xl md:text-5xl tracking-tight mb-4">
+                Yuk, Kenali 5 Pilar Utama Laili Brand!
+            </h2>
+            <p class="text-white/95 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed font-light mb-6">
+                Lebih dari sekadar brand, Laili Brand hadir untuk menemani setiap langkah keluarga Indonesia. Mulai dari produk berkualitas, peluang usaha, hingga edukasi dan pemberdayaan.
+            </p>
+            
+            <button onclick="openModal('pilarModal')" class="inline-flex items-center gap-2 bg-white text-brand-red hover:bg-brand-pink font-semibold px-6 py-2.5 rounded-full text-sm shadow-md transition mb-12">
+                Pelajari selengkapnya <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 pt-2">
+                <div class="arch-card overflow-hidden relative h-80 w-full border-2 border-white/30 shadow-2xl group">
+                    <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=600&q=80" alt="Hubungan dengan Allah" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-2 right-2 text-center">
+                        <h3 class="font-serif italic text-lg font-bold text-white leading-snug drop-shadow">Hubungan<br/>dengan<br/>Allah</h3>
+                    </div>
+                </div>
+                <div class="arch-card overflow-hidden relative h-80 w-full border-2 border-white/30 shadow-2xl group">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Hubungan dengan Suami" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-2 right-2 text-center">
+                        <h3 class="font-serif italic text-lg font-bold text-white leading-snug drop-shadow">Hubungan<br/>dengan<br/>Suami</h3>
+                    </div>
+                </div>
+                <div class="arch-card overflow-hidden relative h-80 w-full border-2 border-white/30 shadow-2xl group">
+                    <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=600&q=80" alt="Hubungan dengan Anak" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-2 right-2 text-center">
+                        <h3 class="font-serif italic text-lg font-bold text-white leading-snug drop-shadow">Hubungan<br/>dengan<br/>Anak</h3>
+                    </div>
+                </div>
+                <div class="arch-card overflow-hidden relative h-80 w-full border-2 border-white/30 shadow-2xl group">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=600&q=80" alt="Hubungan dengan Orang Tua / Mertua" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-2 right-2 text-center">
+                        <h3 class="font-serif italic text-base font-bold text-white leading-snug drop-shadow">Hubungan<br/>dengan<br/>Orang Tua / Mertua</h3>
+                    </div>
+                </div>
+                <div class="arch-card overflow-hidden relative h-80 w-full border-2 border-white/30 shadow-2xl group">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Hubungan dengan Sosial / Pekerjaan" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-2 right-2 text-center">
+                        <h3 class="font-serif italic text-base font-bold text-white leading-snug drop-shadow">Hubungan<br/>dengan<br/>Sosial / Pekerjaan</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: INCOME & KEMITRAAN CALLOUT -->
+    <section id="kemitraan" class="py-16 md:py-24 bg-brand-pink relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-12">
+                <h2 class="font-sans font-bold text-2xl sm:text-3xl lg:text-4xl text-brand-text leading-snug">
+                    Ingin punya <span class="font-serif italic text-brand-red font-semibold">penghasilan tambahan</span> dari rumah atau masih <span class="font-serif italic text-brand-red font-semibold">bingung memulai usaha?</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-transparent max-w-5xl mx-auto">
+                <div class="lg:col-span-6">
+                    <div class="rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80" alt="Komunitas Laili" class="w-full h-64 sm:h-72 object-cover" />
+                    </div>
+                </div>
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                    <p class="text-brand-text text-base sm:text-lg leading-relaxed font-normal">
+                        Bersama Laili Brand, Bunda bisa mendapatkan peluang bisnis, bimbingan, dan pendampingan untuk terus berkembang.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <button onclick="openModal('kemitraanModal')" class="bg-brand-pinkdark border border-brand-red/20 text-brand-red font-bold px-7 py-3 rounded-full hover:bg-pink-300 transition">
+                            Gabung Kemitraan
+                        </button>
+                        <button onclick="openModal('consultModal')" class="bg-brand-red text-white font-bold px-7 py-3 rounded-full hover:bg-brand-reddark shadow transition">
+                            Konsultasi Gratis
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: MEDIA SOSIAL -->
+    <section class="py-16 md:py-20 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+            <h3 class="font-serif italic text-3xl text-brand-red font-semibold">Yuk Bunda...</h3>
+            <h2 class="font-sans font-bold text-3xl sm:text-4xl text-brand-text">
+                Hubungi Lebih Dekat dengan Laili Brand!
+            </h2>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto pt-2">
+                Jangan lewatkan inspirasi, tips bermanfaat, informasi produk, hingga peluang usaha menarik dari Laili Brand. Ikuti media sosial kami dan jadilah bagian dari keluarga Laili Brand yang terus bertumbuh bersama!
+            </p>
+
+            <div class="flex justify-center items-center gap-6 pt-8">
+                <a href="https://facebook.com" target="_blank" class="w-24 h-24 md:w-28 md:h-28 bg-brand-red hover:bg-brand-reddark text-white rounded-2xl flex flex-col items-center justify-center gap-2 shadow-xl transition-transform hover:-translate-y-1">
+                    <i class="fa-brands fa-facebook-f text-3xl"></i>
+                    <span class="text-xs font-semibold">Facebook</span>
+                </a>
+                <a href="https://instagram.com/lailibrand" target="_blank" class="w-24 h-24 md:w-28 md:h-28 bg-brand-red hover:bg-brand-reddark text-white rounded-2xl flex flex-col items-center justify-center gap-2 shadow-xl transition-transform hover:-translate-y-1">
+                    <i class="fa-brands fa-instagram text-3xl"></i>
+                    <span class="text-xs font-semibold">Instagram</span>
+                </a>
+                <a href="https://tiktok.com/@lailibrand" target="_blank" class="w-24 h-24 md:w-28 md:h-28 bg-brand-red hover:bg-brand-reddark text-white rounded-2xl flex flex-col items-center justify-center gap-2 shadow-xl transition-transform hover:-translate-y-1">
+                    <i class="fa-brands fa-tiktok text-3xl"></i>
+                    <span class="text-xs font-semibold">Titktok</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wavy Divider -->
+    <div class="w-full overflow-hidden leading-none bg-white">
+        <svg class="w-full h-12 md:h-16 text-brand-red" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 60C180 110 360 10 540 60C720 110 900 10 1080 60C1260 110 1440 30 1440 30V120H0V60Z" fill="currentColor"/>
+        </svg>
+    </div>
+
+    <!-- SECTION 6: KATALOG PRODUK -->
+    <section id="katalog" class="py-16 md:py-24 bg-brand-red text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-sans font-bold text-2xl sm:text-3xl md:text-4xl max-w-3xl mx-auto leading-tight mb-12">
+                Temukan produk Laili Brand yang sesuai dengan kebutuhan Bunda dan keluarga!
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-end max-w-5xl mx-auto">
+                <div class="bg-white rounded-2xl p-5 text-brand-text shadow-2xl flex flex-col items-center justify-between group hover:-translate-y-2 transition">
+                    <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-brand-pink flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=500&q=80" alt="Milk Mee" class="max-h-full object-contain group-hover:scale-105 transition" />
+                    </div>
+                    <h3 class="font-sans font-bold text-xl text-gray-900 mt-2">Milk Mee</h3>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 text-brand-text shadow-2xl flex flex-col items-center justify-between group hover:-translate-y-2 transition">
+                    <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-brand-pink flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80" alt="Waiteu" class="max-h-full object-contain group-hover:scale-105 transition" />
+                    </div>
+                    <h3 class="font-sans font-bold text-xl text-gray-900 mt-2">Waiteu</h3>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 text-brand-text shadow-2xl flex flex-col items-center justify-between group hover:-translate-y-2 transition">
+                    <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-brand-pink flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=500&q=80" alt="Layali" class="max-h-full object-contain group-hover:scale-105 transition" />
+                    </div>
+                    <h3 class="font-sans font-bold text-xl text-gray-900 mt-2">Layali</h3>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center gap-2 mt-10">
+                <span class="w-10 h-2 bg-white rounded-full"></span>
+                <span class="w-4 h-2 bg-white/40 rounded-full hover:bg-white cursor-pointer"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FREE SEMINAR CALLOUT -->
+    <section id="seminar" class="py-16 md:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+                <div class="lg:col-span-6 relative flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="relative z-10 flex items-center justify-center">
+                            <div class="rounded-3xl overflow-hidden border-4 border-brand-pink shadow-xl w-60 h-80">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Woman Entrepreneur" class="w-full h-full object-cover" />
+                            </div>
+
+                            <div class="absolute -right-4 top-4 z-20 space-y-2 transform rotate-3">
+                                <div class="w-44 bg-brand-red text-white p-2.5 rounded-lg shadow-2xl border border-white text-center">
+                                    <p class="text-[9px] uppercase tracking-wider text-pink-200 font-bold">LAILI BOOKS</p>
+                                    <h4 class="font-serif font-bold text-xs">TUNTASKAN 100 BOX PERTAMA</h4>
+                                </div>
+                                <div class="w-44 bg-gradient-to-r from-amber-600 to-amber-700 text-white p-2.5 rounded-lg shadow-2xl border border-white text-center">
+                                    <p class="text-[9px] uppercase tracking-wider text-amber-100 font-bold">SEMINAR EBOOK</p>
+                                    <h4 class="font-serif font-bold text-xs">INCOME BERLIPAT HIDUP NAIK KELAS</h4>
+                                </div>
+                                <div class="w-44 bg-brand-reddark text-white p-2.5 rounded-lg shadow-2xl border border-white text-center">
+                                    <h4 class="font-serif font-bold text-xs">CAIRAN REZEKI DARI MINUS JADI PLUS</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-4 text-center lg:text-left">
+                    <h3 class="font-serif italic text-3xl sm:text-4xl text-brand-red font-semibold">
+                        Bunda...
+                    </h3>
+                    <h2 class="font-sans font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-text leading-tight">
+                        Mau Punya Income Sendiri dari Rumah?
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed pt-1">
+                        Yuk, temukan jawabannya di seminar <strong class="text-brand-red">GRATIS</strong> Laili Brand dan mulai perjalanan menuju keluarga yang lebih berdaya!
+                    </p>
+                    <div class="pt-4">
+                        <button onclick="openModal('seminarModal')" class="bg-brand-red hover:bg-brand-reddark text-white font-bold px-8 py-3.5 rounded-full shadow-xl transition transform hover:scale-105">
+                            Daftar Seminar Gratis
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 leading-none z-10">
+            <svg class="w-full h-10 md:h-14 text-brand-red" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 40C240 80 480 0 720 40C960 80 1200 10 1440 40V120H0V40Z" fill="currentColor"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SECTION 8: TESTIMONIALS -->
+    <section class="py-16 md:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-14">
+                <h2 class="font-sans font-bold text-xl sm:text-2xl md:text-3xl text-brand-text leading-relaxed">
+                    Karena setiap cerita <span class="font-serif italic text-brand-red font-semibold">punya makna</span>, dan setiap perjalanan bisa menjadi <span class="font-serif italic text-brand-red font-semibold">inspirasi untuk terus bertumbuh</span> bersama Laili Brand.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col justify-between relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fa-solid fa-quote-left text-4xl text-gray-300"></i>
+                        <div class="text-center">
+                            <h4 class="font-bold text-gray-900 text-base">Bu Surya</h4>
+                            <span class="text-xs text-gray-500">Agen</span>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-4xl text-gray-300"></i>
+                    </div>
+                    <p class="text-gray-700 italic text-sm sm:text-base leading-relaxed text-center">
+                        "Karena Laili Brand ini komunitas ibu rumah tangga itu yang saya suka, terus dari seminar-seminarnya jadi semakin sayang sama keluarga. Tidak ada percekcokan antara rumah tangga. Saya semakin banyak belajar dari Miss Laili dalam seminarnya."
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col justify-between relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fa-solid fa-quote-left text-4xl text-gray-300"></i>
+                        <div class="text-center">
+                            <h4 class="font-bold text-gray-900 text-base">Risty Tagor</h4>
+                            <span class="text-xs text-gray-500">Distributor</span>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-4xl text-gray-300"></i>
+                    </div>
+                    <p class="text-gray-700 italic text-sm sm:text-base leading-relaxed text-center">
+                        "Mengenai produk Laili Waiteu Collagen Masya Allah banget, karena memang sudah menggunakan tahun lalu dan pas halal. Aku ada alergi ternyata Alhamdulillah aman. Manfaatnya terasa karena memang fungsi collagen bukan hanya kulit saja, tapi antioksidan yang tinggi untuk tubuh."
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center gap-2 mt-10">
+                <span class="w-10 h-2 bg-brand-red rounded-full"></span>
+                <span class="w-4 h-2 bg-brand-pinkdark rounded-full cursor-pointer"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: TAGLINE BANNER -->
+    <section class="bg-brand-red py-8 text-white text-center shadow-inner">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-serif italic text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide">
+                Menuju 1 Juta Keluarga Berdaya
+            </h2>
+        </div>
+    </section>
+
+    <!-- SECTION 10: FOOTER -->
+    <footer id="marketplace" class="bg-white text-brand-text pt-16 pb-8 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12">
+                <div class="md:col-span-5 space-y-4">
+                    <h3 class="font-serif font-bold text-4xl text-gray-900">Laili</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed max-w-sm">
+                        Laili Brand hadir dengan produk berkualitas dan peluang usaha untuk mendukung keluarga Indonesia agar terus bertumbuh, mandiri, dan berdaya dari rumah.
+                    </p>
+                    <div class="pt-2">
+                        <p class="font-bold text-sm text-gray-900">
+                            B1 No, Babatan, Kec. Wiyung,<br/>Surabaya, Jawa Timur, Indonesia
+                        </p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="font-serif font-bold text-lg text-gray-900 mb-2">Contact Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li>
+                            <a href="https://instagram.com/lailibrand" target="_blank" class="hover:text-brand-red flex items-center gap-3">
+                                <i class="fa-brands fa-instagram text-lg text-gray-800 w-5"></i> @lailibrand
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://tiktok.com/@lailibrand" target="_blank" class="hover:text-brand-red flex items-center gap-3">
+                                <i class="fa-brands fa-tiktok text-lg text-gray-800 w-5"></i> @lailibrand
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com" target="_blank" class="hover:text-brand-red flex items-center gap-3">
+                                <i class="fa-brands fa-facebook-f text-lg text-gray-800 w-5"></i> Laili Brand
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/6281234226384" target="_blank" class="hover:text-brand-red flex items-center gap-3">
+                                <i class="fa-brands fa-whatsapp text-lg text-gray-800 w-5"></i> 081234226384
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-serif font-bold text-lg text-gray-900 mb-2">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><a href="#" class="hover:text-brand-red transition">Shipping & Return</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition">Term of Use</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition">Wishlist</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition">Compare</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition">Subscribe</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-brand-red text-white py-4 text-center text-xs font-semibold">
+            <div class="max-w-7xl mx-auto px-4">
+                Copyright © 2026 Laili Brand. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL POPUP -->
+    <div id="modalBackdrop" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+
+    <div id="registrationModal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 hidden w-full max-w-md p-4">
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-brand-pink">
+            <div class="bg-brand-red text-white p-6 relative">
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-white/80 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <h3 id="modalTitle" class="font-serif text-2xl font-bold">Daftar Seminar Gratis</h3>
+                <p id="modalSubtitle" class="text-xs text-white/80 mt-1">Isi formulir berikut untuk bergabung bersama Laili Brand.</p>
+            </div>
+            <form onsubmit="handleFormSubmit(event)" class="p-6 space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Nama Lengkap Bunda</label>
+                    <input type="text" required placeholder="Contoh: Bunda Ani" class="w-full px-4 py-2.5 text-sm rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-red focus:outline-none" />
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Nomor WhatsApp</label>
+                    <input type="tel" required placeholder="08123456789" class="w-full px-4 py-2.5 text-sm rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-red focus:outline-none" />
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Kota Asal</label>
+                    <input type="text" required placeholder="Surabaya" class="w-full px-4 py-2.5 text-sm rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-red focus:outline-none" />
+                </div>
+                <button type="submit" class="w-full bg-brand-red hover:bg-brand-reddark text-white font-bold py-3 rounded-full text-sm shadow transition">
+                    Kirim Pendaftaran
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- External Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
